@@ -296,6 +296,13 @@ class Format {
 	{
 		return unserialize(trim($string));
 	}
+	
+	// Encode String as array
+	private function _from_php($string)
+	{
+		parse_str($string,$array);
+		return $array;
+	}
 
 }
 
